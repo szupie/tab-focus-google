@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "Google Keyful Entry",
+	"version": "0.1.0",
+	"description": "Enables Google search results keyboard navigation even with Google Instant predictions turned off",
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"include_globs": ["http://www.google.*/search*", "https://www.google.*/search*"],
+			"js": ["keyful-entry.js"],
+			"css": ["keyful.css"],
+			"run_at": "document_end"
+		}
+	],
+	"icons": {
+		"48": "icon.png",
+		"96": "icon@2x.png"
+	}
+}

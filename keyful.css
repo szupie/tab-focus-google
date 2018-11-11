@@ -1,0 +1,9 @@
+.r a:focus::before {
+	content: '►';
+	position: absolute;
+	top: 4px;
+	right: 100%;
+	margin-right: 2px;
+	color: #4273DB;
+	font: 11px arial, sans-serif;
+}
