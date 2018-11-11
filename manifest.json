@@ -1,14 +1,14 @@
 {
 	"manifest_version": 2,
-	"name": "Google Keyful Entry",
-	"version": "0.1.0",
-	"description": "Enables Google search results keyboard navigation even with Google Instant predictions turned off",
+	"name": "Tab Focus through Google Search Results",
+	"version": "0.2.0",
+	"description": "Use the tab key to navigate through Google search results",
 	"content_scripts": [
 		{
 			"matches": ["<all_urls>"],
 			"include_globs": ["http://www.google.*/search*", "https://www.google.*/search*"],
-			"js": ["keyful-entry.js"],
-			"css": ["keyful.css"],
+			"js": ["dom-modifier.js"],
+			"css": ["style.css"],
 			"run_at": "document_end"
 		}
 	],

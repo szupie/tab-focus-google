@@ -1,4 +1,4 @@
-.r a:focus::before {
+a[tabindex="1"]:focus::before {
 	content: '►';
 	position: absolute;
 	top: 4px;
