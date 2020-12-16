@@ -5,11 +5,22 @@
 	"description": "Use the tab key to navigate through Google search results",
 	"content_scripts": [
 		{
-			"matches": ["<all_urls>"],
-			"include_globs": ["http://www.google.*/search*", "https://www.google.*/search*"],
-			"js": ["dom-modifier.js"],
+			"matches": ["*://*/search*"],
+			"include_globs": ["*://www.google.*/search*"],
+			"js": [
+				"google-selectors.js",
+				"dom-modifier.js"
+			],
 			"css": ["style.css"],
 			"run_at": "document_end"
+		},
+		{
+			"matches": ["*://*.duckduckgo.com/*"],
+			"js": [
+				"ddg-selectors.js",
+				"dom-modifier.js"
+			],
+			"css": ["style.css"]
 		}
 	],
 	"icons": {
