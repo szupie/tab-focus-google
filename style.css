@@ -1,9 +1,15 @@
-a[tabindex="1"]:focus::before {
+a[tabindex="1"]:focus::after {
 	content: '►';
 	position: absolute;
-	top: 4px;
 	right: 100%;
+	margin-top: 1em;
 	margin-right: 2px;
 	color: #4273DB;
 	font: 11px arial, sans-serif;
+}
+
+/* for duckduckgo */
+a.result__a[tabindex="1"]:focus::after {
+	margin-top: 0.25em;
+	margin-right: 0;
 }
